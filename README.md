@@ -49,9 +49,9 @@ $$
 
 **Inventory balance**
 
-\[
+$$
 I_{p,t-1} + X_{p,t} - D_{p,t} = I_{p,t}
-\]
+$$
 
 **Production capacity**
 
