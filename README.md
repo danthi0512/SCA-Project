@@ -82,3 +82,59 @@ The model will be extended to evaluate different business scenarios, such as:
 - Changes in inventory holding costs
 
 The objective is to understand how changes in business assumptions affect the optimal production plan, inventory levels, and total cost.
+
+## Results & Insights
+
+### Monthly Demand vs Production
+
+![Monthly Demand vs Production](outputs/monthly_demand_vs_production.png)
+
+### Insight
+
+- Production generally follows the demand pattern across the planning horizon.
+- In some months, production is lower than demand because available inventory from previous months is used to fulfill demand.
+- This indicates that the optimization model is able to shift production across months while maintaining demand fulfillment.
+
+### Business Implication
+
+The production plan does not require production to exactly match monthly demand. 
+Carrying inventory across periods provides flexibility to balance production capacity and demand fluctuations.
+
+### Capacity Utilization 
+![Capacity Utilization](outputs/monthly_capacity_utilization.png)
+
+### Insight
+
+- Capacity utilization reached highest at 100% in August and December, making these two the most capacity-constrained months in the planning horizon
+- Months with higher utilization indicate periods where production capacity is more constrained.
+- These periods may represent potential bottlenecks if demand increases further.
+
+### Business Implication
+
+Production capacity should be monitored closely during high-utilization months. 
+Additional capacity or earlier production may be required under higher-demand scenarios.
+
+### Inventory
+![Inventory](outputs/monthly_inventory.png)
+
+### Insight
+
+- Inventory is carried into periods where production capacity reached its peak and may not be sufficient to fully cover demand.
+- Positive holding costs discourage unnecessary inventory accumulation.
+
+### Business Implication
+
+The optimized plan balances the trade-off between producing earlier and holding inventory versus producing later with available capacity.
+
+### What - If scenarios
+![What-If scenarios](outputs/scenarion_analysis.png)
+### Insight
+
+- The Demand +20% scenario increases total cost as additional production is required to meet higher demand.
+- The Capacity -20% scenario may require production to be shifted across months, remain almost the same total cost as base scenario with higher average capacity utilization. However, higher capacity decrease may cause supply risk for unpredictable demand spike.
+- The Holding Cost +50% scenario increases the cost of carrying inventory, however the increase is not significant. 
+
+### Business Implication
+
+Capacity constraints and demand uncertainty have a direct impact on production planning decisions. 
+Scenario analysis helps identify potential cost increases and capacity risks before they occur.
